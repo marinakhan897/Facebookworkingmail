@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Riaz Mail</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .form-group input, 
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .checkbox-group input {
+            width: auto;
+        }
+        
+        .form-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: #856404;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 User Registration</h1>
+            <p>Create account (Admin approval required)</p>
+            <p class="owner">Owner: riazalishahani485@gmail.com</p>
+        </header>
+        
+        <main>
+            <div class="form-note">
+                <strong>Note:</strong> All registrations require manual approval by owner. 
+                You will receive email confirmation after approval.
+            </div>
+            
+            <div class="card">
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" required 
+                               placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required 
+                               placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" 
+                               placeholder="+92 XXX XXXXXXX">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="purpose">Purpose of Use *</label>
+                        <select id="purpose" required>
+                            <option value="">Select purpose</option>
+                            <option value="business">Business/Professional</option>
+                            <option value="personal">Personal</option>
+                            <option value="organization">Organization</option>
+                            <option value="education">Education</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="details">Additional Details</label>
+                        <textarea id="details" rows="3" 
+                                  placeholder="Tell us why you need email service..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">
+                                I agree to terms and conditions and understand 
+                                that admin approval is required
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn primary" style="width: 100%;">
+                        Submit for Approval
+                    </button>
+                </form>
+                
+                <a href="index.html" class="back-btn">
+                    ← Back to Home
+                </a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Registration processed manually by owner</p>
+            <p class="note">Approval typically takes 24-48 hours</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Registration submitted! Owner will review and contact you.');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
