@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - Riaz Mail</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .login-note {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: #1565c0;
+        }
+        
+        .forgot-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .forgot-link a {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔑 User Login</h1>
+            <p>Access your email dashboard</p>
+        </header>
+        
+        <main class="login-container">
+            <div class="login-note">
+                <strong>Note:</strong> You can only login after admin approval.
+                If you haven't registered yet, please register first.
+            </div>
+            
+            <div class="card">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" required 
+                               placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required 
+                               placeholder="Enter your password">
+                    </div>
+                    
+                    <button type="submit" class="btn primary" style="width: 100%;">
+                        Login to Dashboard
+                    </button>
+                </form>
+                
+                <div class="forgot-link">
+                    <a href="#" onclick="alert('Contact owner at riazalishahani485@gmail.com')">
+                        Forgot password? Contact owner
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="index.html" class="back-btn">← Back to Home</a>
+                <span style="margin: 0 10px;">|</span>
+                <a href="register.html" class="back-btn">New User? Register</a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Need help? Contact: riazalishahani485@gmail.com</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login functionality will be active after admin approves your registration.');
+        });
+    </script>
+</body>
+</html>
